@@ -1,0 +1,29 @@
+<div>
+
+    <div class="contato-container">
+
+        <div class="contato-item" *ngFor="let cont of contatos">
+            <div class="contato-cart">
+                <div class="contato-info">
+                    <div><img [src]="cont.foto"></div>
+                    <div>{{ cont.nome }}</div>
+                </div>
+                <div class="opcoes-container">
+                    <div class="opcoes-button" (click)="(cont.menu == true ? cont.menu = false : cont.menu = true)">. . .</div>
+
+                    <div *ngIf="(cont.menu == true)" class="opcoes-buttons-container">
+                        <div>Ver</div>
+                        <div>Editar</div>
+                        <div>Remover</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="botao-adicionar">
+        <div class="botao-adicionar-btn">+</div>
+    </div>
+
+</div>
